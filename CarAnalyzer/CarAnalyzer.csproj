@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+    <PackageReference Include="ReactiveUI" Version="11.2.3" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.440" />
+    <PackageReference Include="ReactiveUI.Fody" Version="11.2.3" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Plugin.BluetoothLE" Version="6.2.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MainPage %28copy%29.xaml.cs" />
+    <Compile Remove="CarDataPage %28copy%29.xaml.cs" />
+    <Compile Remove="CarDataPage.cs" />
+    <Compile Remove="CarDataPage %28another copy%29.xaml.cs" />
+    <Compile Remove="DeviseListModel.cs" />
+    <Compile Remove="Infrastructure\Extensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="CarDataPage %28copy%29.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\Library\Frameworks\Xamarin.Android.framework\Versions\10.0.6.2\lib\xamarin.android\xbuild-frameworks\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+  </ItemGroup>
+</Project>
