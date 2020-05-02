@@ -11,6 +11,8 @@ using Plugin.Permissions.Abstractions;
 using Plugin.Geolocator;
 using Plugin.BluetoothLE;
 using System.Reactive.Linq;
+using Microsoft.AppCenter.Push;
+using Plugin.LocalNotifications;
 
 namespace CarAnalyzer
 {
@@ -24,6 +26,7 @@ namespace CarAnalyzer
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            CrossLocalNotifications.Current.Show("Notification", "works");
             //var devices = CrossBleAdapter.Current.GetPairedDevices();
             //devices.Subscribe(deviceResult =>
             //{
